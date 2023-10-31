@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taskmanagement.TaskManagementController">
+   <left>
+      <ListView fx:id="listView" onMouseClicked="#onListViewSelected" prefHeight="400.0" prefWidth="250.0" style="-fx-background-color: #d0e4e0;" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f8fce8;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="9.0" layoutY="26.0" prefHeight="30.0" prefWidth="82.0" text="Task Name:">
+               <font>
+                  <Font name="Andale Mono" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="9.0" layoutY="78.0" prefHeight="30.0" prefWidth="141.0" text="Task Description:">
+               <font>
+                  <Font name="Andale Mono" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="inputName" layoutX="91.0" layoutY="28.0" prefHeight="26.0" prefWidth="236.0" />
+            <TextField fx:id="inputDesc" layoutX="150.0" layoutY="80.0" prefHeight="26.0" prefWidth="177.0" />
+            <Button layoutX="53.0" layoutY="249.0" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="26.0" prefWidth="244.0" style="-fx-background-color: #C39B9B;" text="SAVE">
+               <font>
+                  <Font name="Andale Mono" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="label" layoutX="110.0" layoutY="330.0" prefHeight="59.0" prefWidth="155.0" text="Label">
+               <font>
+                  <Font name="Andale Mono" size="13.0" />
+               </font>
+            </Label>
+            <MenuButton layoutX="188.0" layoutY="148.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="114.0" text="Tasks">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Home Work" />
+                <MenuItem mnemonicParsing="false" text="Meeting" />
+                  <MenuItem mnemonicParsing="false" text="Shopping" />
+              </items>
+            </MenuButton>
+            <MenuButton layoutX="26.0" layoutY="148.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="108.0" text="Priority">
+              <items>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <RadioButton mnemonicParsing="false" text="LOW" />
+                     </graphic>
+                  </MenuItem>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <RadioButton mnemonicParsing="false" text="MEDIUM" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <RadioButton mnemonicParsing="false" text="HIGHT" />
+                     </graphic>
+                  </MenuItem>
+              </items>
+            </MenuButton>
+            <Button layoutX="148.0" layoutY="293.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" style="-fx-background-color: #C39B9B;" text="Delete">
+               <font>
+                  <Font name="Andale Mono" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
